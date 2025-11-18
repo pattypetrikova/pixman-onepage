@@ -1,0 +1,31 @@
+.container {
+	width: min(rem(1568), 100%);
+	margin-inline: auto;
+}
+
+.section {
+	padding: rem(40) rem(20) rem(80) rem(20);
+
+    @media (min-width: $bp-md) {
+		padding: rem(40) rem(40) rem(80) rem(40);
+    }
+
+	@media (min-width: $bp-lg) {
+		padding-block: rem(80) rem(120);
+    }
+}
+
+.skip-link {
+	position: absolute;
+	left: -999px;
+	top: 0;
+	background: #000;
+	color: $color-bg;
+	padding: rem(8) rem(16); // 8px 16px
+}
+
+.skip-link:focus-visible {
+	left: rem(16);
+	top: rem(16);
+	z-index: 1000;
+}

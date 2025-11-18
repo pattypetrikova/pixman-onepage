@@ -1,0 +1,127 @@
+// Section Headings & Hero Headings
+
+.section-heading {
+    text-align: center;
+    margin-bottom: rem(40);
+
+    &--left {
+        text-align: left;
+    }
+
+    &__eyebrow {
+        font-size: $fs-sm;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: $color-text-muted;
+        margin-bottom: rem(8);
+    }
+
+    &__title {
+        font-size: $fs-xl; // cca 24px
+        font-weight: 700;
+        color: $color-text;
+        margin-bottom: rem(12);
+    }
+
+   &__decor {
+        margin: 0 auto; 
+        width: fit-content; 
+        margin-top: rem(12);
+    }
+}
+
+
+.hero__subtitle {
+    font-size: $fs-lg; // cca 18px
+    color: $color-text-muted;
+    margin-bottom: rem(8);
+}
+
+.hero__title {
+    font-size: $fs-xxl; // cca 40px
+    font-weight: 800;
+    color: $color-text;
+    line-height: 1.1;
+    margin-bottom: rem(32);
+}
+
+
+
+// =====================================
+// Buttons
+// =====================================
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+
+    padding: rem(10) rem(24); // něco jako 14px x 24px ve Figmě
+    border-radius: $radius-pill;
+    border: rem(1) solid transparent;
+
+    font-size: $fs-sm;
+    font-weight: 500;
+    line-height: 1.2;
+    cursor: pointer;
+
+    background-color: transparent;
+    color: $color-primary;
+
+    text-decoration: none; // i pro <a>
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.1s ease;
+
+    &:focus-visible {
+        outline: rem(3) solid rgba($color-primary, 0.4);
+        outline-offset: rem(2);
+    }
+
+    &:active {
+        transform: translateY(rem(1));
+    }
+}
+
+// hlavní outline button (např. "Všechny služby", "Více informací")
+.btn--outline {
+    background-color: #fff;
+    color: $color-primary;
+    border-color: $color-primary;
+    box-shadow: 0 rem(4) rem(12) rgba(0, 0, 0, 0.06);
+
+    &:hover {
+        background-color: $color-primary-light;
+    }
+}
+
+// plné modré tlačítko – můžeš použít třeba pro hotline nebo speciální CTA
+.btn--primary {
+    background-color: $color-primary;
+    color: #fff;
+    border-color: $color-primary;
+    box-shadow: 0 rem(6) rem(18) rgba(0, 0, 0, 0.12);
+
+    &:hover {
+        background-color: darken($color-primary, 5%);
+    }
+}
+
+// menší varianta – když bude potřeba v kartách nebo footeru
+.btn--sm {
+    padding: rem(6) rem(16);
+    font-size: $fs-sm;
+}
+
+// ikona v buttonu (pro šipky apod.)
+.btn__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

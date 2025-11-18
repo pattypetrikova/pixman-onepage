@@ -1,0 +1,43 @@
+// FONT
+$font-base: "Inter", system-ui, sans-serif;
+
+// FONT SIZES 
+$fs-sm: rem(14);
+$fs-md: rem(16);
+$fs-lg: rem(18);
+$fs-xl: rem(24);
+$fs-xxl: rem(80);
+
+// COLORS
+$color-primary: #0064d3;
+$color-primary-light: #e6f1ff;
+$color-secondary: #00a868;
+$color-accent: #ffc400;
+$color-text: #263238;
+$color-text-muted: #5f6c77;
+$color-bg: #ffffff;
+$color-bg-light: #f6f9fc;
+$color-border: #e5e9ef;
+
+// SHADOWS
+$shadow-card: 0 rem(8) rem(32) rgba(0, 0, 0, 0.05);
+
+// RADIUS
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 24px;
+$radius-pill: 999px;
+
+// SPACING SCALE
+$space-1: rem(8);
+$space-2: rem(16);
+$space-3: rem(24);
+$space-4: rem(36);
+$space-5: rem(40);
+$space-top: rem(80);
+
+// BREAKPOINTS
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1280px;
+$bp-xl: 1568px;

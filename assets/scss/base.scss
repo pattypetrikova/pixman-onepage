@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-base;
+  font-size: $fs-md;
+  line-height: 1.5;
+  color: $color-text;
+  background-color: $color-bg;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: rem(0);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: rem(12);
+  color: $color-text-muted;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+  color: $color-text;
+}
+
+h1 {
+  font-size: $fs-xxl;
+}
+
+h2 {
+  font-size: $fs-xl;
+}
+
+h3 {
+  font-size: $fs-lg;
+}
+
+h4 {
+  font-size: $fs-md;
+}
+
+// Sekční titulky (např. „Další služby“, „Napsali o nás“)
+.section__title {
+  text-align: center;
+  font-size: $fs-xl;
+  margin-bottom: rem(32);
+}
+
+// Menší nadpisy v kartách apod.
+.card__title {
+  font-size: $fs-lg;
+  font-weight: 600;
+  margin-bottom: rem(8);
+}
+
+.card__text {
+  font-size: $fs-sm;
+  color: $color-text-muted;
+}

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Assistance</title>
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Skip link pro klávesovou navigaci -->
+  <a class="skip-link" href="#main">Přeskočit na hlavní obsah</a>
+
+  <!-- =========================================================
+    Header
+  ========================================================== -->
+  <header class="header" role="banner">
+
+    <div class="header__main container">
+      <a href="/" class="header__logo">
+        <img src="assets/img/logo.svg" alt="Global Assistance">
+      </a>
+
+      <ul class="header__info">
+          <li class="header__info-item">🔵 Volejte 24/7</li>
+          <li class="header__info-item">🟢 Aktuální situace: spojíme vás ihned</li>
+        </ul>
+
+      <nav class="nav" aria-label="Hlavní navigace" role="navigation">
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-label="Otevřít hlavní menu"
+          aria-expanded="false"
+          aria-controls="main-nav-list">
+        </button>
+
+        <ul class="nav__list" id="main-nav-list">
+          <li><a href="#services" class="nav__link">Naše služby</a></li>
+          <li><a href="#testimonials" class="nav__link">Reference</a></li>
+          <li><a href="#faq" class="nav__link">FAQ</a></li>
+          <li><a href="#about" class="nav__link">O nás</a></li>
+          <li><a href="#contact" class="nav__link">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+
+    <!-- =========================================================
+      Hero
+    ========================================================== -->
+  <section class="hero section" aria-labelledby="hero-title">
+  <div class="hero__inner">
+    
+    <div class="hero__heading">
+      <p class="hero__subtitle">V krizových situacích</p>
+      <h1 class="hero__title" id="hero-title">už nikdy nebudete sami</h1>
+    </div>
+
+    <!-- DESKTOP verze - velký background -->
+    <div class="hero__desktop">
+      <article class="hero__service" data-service="crash">
+        <div class="card__body">
+          <h2 class="card__title">Motoristická asistence</h2>
+          <a class="btn btn--ghost" href="#">Více informací</a>
+        </div>
+      </article>
+
+      <article class="hero__service" data-service="hospital">
+        <div class="card__body">
+          <h2 class="card__title">Zdravotní asistence</h2>
+          <a class="btn btn--ghost" href="#">Více informací</a>
+        </div>
+      </article>
+
+      <article class="hero__service" data-service="phone">
+        <div class="card__body">
+          <h2 class="card__title">Asistenční služby pro domácnost</h2>
+          <a class="btn btn--ghost" href="#">Více informací</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- MOBILE verze - samostatné karty -->
+    <div class="hero__mobile">
+      <article class="hero__card">
+        <div class="hero__card-image">
+          <img src="/assets/images/crash.jpg" alt="Odtah havarovaného auta">
+        </div>
+        <div class="hero__card-content">
+          <h2 class="hero__card-title">Motoristická asistence</h2>
+          <a class="btn btn--ghost" href="#">Více informací</a>
+        </div>
+      </article>
+
+      <article class="hero__card">
+        <div class="hero__card-image">
+          <img src="/assets/images/hospital.jpg" alt="Pacientka v nemocnici">
+        </div>
+        <div class="hero__card-content">
+          <h2 class="hero__card-title">Zdravotní asistence</h2>
+          <a class="btn btn--ghost" href="#">Více informací</a>
+        </div>
+      </article>
+
+      <article class="hero__card">
+        <div class="hero__card-image">
+          <img src="/assets/images/phonecall.jpg" alt="Havarie v domácnosti">
+        </div>
+        <div class="hero__card-content">
+          <h2 class="hero__card-title">Asistenční služby pro domácnost</h2>
+          <a class="btn btn--ghost" href="#">Více informací</a>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- =========================================================
+      Extra Services
+    ========================================================== -->
+    <section
+        class="services section"
+        id="services"
+        aria-labelledby="services-title">
+
+        <div class="container">
+
+            <div class="section-heading section-heading--center">
+            <h2 class="section-heading__title" id="services-title">Další služby</h2>
+
+            <div class="section-heading__decor">
+                <!-- stejné SVG jako máš -->
+                <svg width="156" height="8" viewBox="0 0 156 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- ... path + defs ... -->
+                </svg>
+            </div>
+            </div>
+
+            <div class="services__grid">
+            <article class="card card--service">
+                <div class="card__image">
+                <img src="assets/images/law.jpg" alt="Socha spravedlnosti s vahami">
+                </div>
+                <div class="card__body">
+                <h3 class="card__title">Právní asistence</h3>
+                <p class="card__text">pomoc při řešení právních problémů v ČR i Evropě</p>
+                </div>
+            </article>
+
+            <article class="card card--service">
+                <div class="card__image">
+                <img src="assets/images/checkin.jpg" alt="Recepční vítá klientku u pultu">
+                </div>
+                <div class="card__body">
+                <h3 class="card__title">Concierge asistenční služby</h3>
+                <p class="card__text">pomoc při získání informací o službách třetích subjektů a zprostředkování těchto služeb</p>
+                </div>
+            </article>
+
+            <article class="card card--service">
+                <div class="card__image">
+                <img src="assets/images/map.jpg" alt="Mapa s ikonami dopravy a dopravní situace">
+                </div>
+                <div class="card__body">
+                <h3 class="card__title">Informační servis</h3>
+                <p class="card__text">aktuální dopravní zpravodajství z ČR, ceny PHM a turistické informace z okolních států</p>
+                </div>
+            </article>
+            </div>
+
+            <div class="section__actions">
+            <a href="#" class="btn btn--primary">Všechny služby</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================================
+      Testimonials
+    ========================================================== -->
+        <section
+            class="testimonials section"
+            id="testimonials"
+            aria-labelledby="testimonials-title">
+
+        <div class="container testimonials__inner">
+
+            <!-- Heading -->
+            <div class="section-heading section-heading--center">
+            <h2 class="section-heading__title" id="testimonials-title">Napsali o nás</h2>
+
+            <div class="section-heading__decor">
+                <!-- Decorative SVG, unchanged -->
+                <svg width="156" height="8" viewBox="0 0 156 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4ZM128 4C128 6.20914 126.209 8 124 8C121.791 8 120 6.20914 120 4C120 1.79086 121.791 0 124 0C126.209 0 128 1.79086 128 4ZM18 8C20.2091 8 22 6.20914 22 4C22 1.79086 20.2091 0 18 0C15.7909 0 14 1.79086 14 4C14 6.20914 15.7909 8 18 8ZM142 4C142 6.20914 140.209 8 138 8C135.791 8 134 6.20914 134 4C134 1.79086 135.791 0 138 0C140.209 0 142 1.79086 142 4ZM32 8C34.2091 8 36 6.20914 36 4C36 1.79086 34.2091 0 32 0C29.7909 0 28 1.79086 28 4C28 6.20914 29.7909 8 32 8ZM156 4C156 6.20914 154.209 8 152 8C149.791 8 148 6.20914 148 4C148 1.79086 149.791 0 152 0C154.209 0 156 1.79086 156 4ZM46 0C43.7909 0 42 1.79086 42 4C42 6.20914 43.7909 8 46 8H58C60.2091 8 62 6.20914 62 4C62 1.79086 60.2091 0 58 0H46ZM68 4C68 1.79086 69.7909 0 72 0H84C86.2091 0 88 1.79086 88 4C88 6.20914 86.2091 8 84 8H72C69.7909 8 68 6.20914 68 4ZM98 0C95.7909 0 94 1.79086 94 4C94 6.20914 95.7909 8 98 8H110C112.209 8 114 6.20914 114 4C114 1.79086 112.209 0 110 0H98Z"
+                    fill="url(#paint0_linear_6_2770)" />
+                <defs>
+                    <linearGradient id="paint0_linear_6_2770" x1="0" y1="4" x2="156" y2="4" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#0077D1" />
+                    <stop offset="1" stop-color="#004FA8" />
+                    </linearGradient>
+                </defs>
+                </svg>
+            </div>
+            </div>
+
+            <div class="testimonials__content">
+
+            <!-- LEFT: Summary -->
+            <aside class="testimonials__summary">
+                <h3 class="testimonials__summary-title">Přehled recenzí</h3>
+
+                <div class="rating-bars">
+                <div class="rating-bars__row"><span>5</span><div><span class="rating-bars__fill rating-bars__fill--full"></span></div></div>
+                <div class="rating-bars__row"><span>4</span><div><span class="rating-bars__fill rating-bars__fill--medium"></span></div></div>
+                <div class="rating-bars__row"><span>3</span><div></div></div>
+                <div class="rating-bars__row"><span>2</span><div></div></div>
+                <div class="rating-bars__row"><span>1</span><div></div></div>
+                </div>
+
+                <div class="testimonials__score-block">
+                <div class="rating__score">4,8</div>
+                <div class="rating rating--stars" aria-hidden="true">★★★★★</div>
+                <p class="rating__text">Recenze: 2 412</p>
+                </div>
+
+                <a href="#" class="btn btn--ghost testimonials__cta">Zobrazit recenze</a>
+            </aside>
+
+            <!-- RIGHT: Slider -->
+            <div class="testimonials__slider" role="region" aria-label="Ukázky recenzí klientů">
+
+                <div class="testimonials__track">
+                <article class="card card--testimonial"><div class="card__body">
+                    <div class="rating rating--stars">★★★★★</div>
+                    <blockquote class="card__quote">„Zámečník mi pomohl během hodiny.“</blockquote>
+                    <p class="card__author">Martina Dvořáková, Brno</p>
+                </div></article>
+
+                <article class="card card--testimonial"><div class="card__body">
+                    <div class="rating rating--stars">★★★★★</div>
+                    <blockquote class="card__quote">„Výborná pomoc při zdravotních problémech v zahraničí.“</blockquote>
+                    <p class="card__author">Jan Novák, Praha</p>
+                </div></article>
+
+                <article class="card card--testimonial"><div class="card__body">
+                    <div class="rating rating--stars">★★★★★</div>
+                    <blockquote class="card__quote">„Odtah vozidla proběhl bez problémů.“</blockquote>
+                    <p class="card__author">Petr Malý, Ostrava</p>
+                </div></article>
+                </div>
+
+                <!-- ARROWS -->
+                <button class="testimonials__nav testimonials__nav--prev" type="button" aria-label="Předchozí recenze">‹</button>
+                <button class="testimonials__nav testimonials__nav--next" type="button" aria-label="Další recenze">›</button>
+            </div>
+
+            </div>
+
+            <!-- DOTS -->
+            <div class="slider-dots">
+            <button class="slider-dots__dot is-active"></button>
+            <button class="slider-dots__dot"></button>
+            <button class="slider-dots__dot"></button>
+            </div>
+
+        </div>
+        </section>
+
+
+    <!-- =========================================================
+      Contact / Form
+    ========================================================== -->
+    <section
+      class="contact section"
+      id="contact"
+      aria-labelledby="contact-title">
+      <div class="container contact__inner">
+
+        <form class="contact__form form">
+
+            <div class="section-heading">
+                <h2 class="section-heading__title">Jsme tu pro vás!</h2>
+            
+                <div class="section-heading__decor">
+                    <svg width="156" height="8" viewBox="0 0 156 8" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4ZM128 4C128 6.20914 126.209 8 124 8C121.791 8 120 6.20914 120 4C120 1.79086 121.791 0 124 0C126.209 0 128 1.79086 128 4ZM18 8C20.2091 8 22 6.20914 22 4C22 1.79086 20.2091 0 18 0C15.7909 0 14 1.79086 14 4C14 6.20914 15.7909 8 18 8ZM142 4C142 6.20914 140.209 8 138 8C135.791 8 134 6.20914 134 4C134 1.79086 135.791 0 138 0C140.209 0 142 1.79086 142 4ZM32 8C34.2091 8 36 6.20914 36 4C36 1.79086 34.2091 0 32 0C29.7909 0 28 1.79086 28 4C28 6.20914 29.7909 8 32 8ZM156 4C156 6.20914 154.209 8 152 8C149.791 8 148 6.20914 148 4C148 1.79086 149.791 0 152 0C154.209 0 156 1.79086 156 4ZM46 0C43.7909 0 42 1.79086 42 4C42 6.20914 43.7909 8 46 8H58C60.2091 8 62 6.20914 62 4C62 1.79086 60.2091 0 58 0H46ZM68 4C68 1.79086 69.7909 0 72 0H84C86.2091 0 88 1.79086 88 4C88 6.20914 86.2091 8 84 8H72C69.7909 8 68 6.20914 68 4ZM98 0C95.7909 0 94 1.79086 94 4C94 6.20914 95.7909 8 98 8H110C112.209 8 114 6.20914 114 4C114 1.79086 112.209 0 110 0H98Z" fill="url(#paint0_linear_6_2770)"/><defs> <linearGradient id="paint0_linear_6_2770" x1="0" y1="4" x2="156" y2="4" gradientUnits="userSpaceOnUse"><stop stop-color="#0077D1"/> <stop offset="1" stop-color="#004FA8"/></linearGradient></defs></svg>
+                </div>
+            </div>
+
+            <div class="form__wrap">
+                        <div class="form__group">
+                    <label for="fname" class="form__label">Jméno</label>
+                    <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    class="form__input"
+                    autocomplete="given-name"
+                    required>
+                </div>
+
+                <div class="form__group">
+                    <label for="lname" class="form__label">Příjmení</label>
+                    <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    class="form__input"
+                    autocomplete="family-name"
+                    required>
+                </div>
+
+                <div class="form__group">
+                    <label for="email" class="form__label">E-mail</label>
+                    <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form__input"
+                    autocomplete="email"
+                    required>
+                </div>
+
+                <div class="form__group">
+                    <label for="phone" class="form__label">Telefon</label>
+                    <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form__input"
+                    autocomplete="tel">
+                </div>
+
+                <div class="form__group">
+                    <label for="message" class="form__label">Zpráva</label>
+                    <textarea
+                    id="message"
+                    name="message"
+                    class="form__input form__textarea"
+                    rows="4"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary form__submit">Odeslat</button>
+
+            <div class="form__message" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+    Footer
+  ========================================================== -->
+  <footer class="footer">
+    <div class="container footer__top section">
+
+      <div class="footer__column">
+        <h3 class="footer__title">Kontakty</h3>
+        <p>GLOBAL ASSISTANCE a.s.</p>
+      </div>
+
+      <div class="footer__column" id="about">
+        <h3 class="footer__title">Naše služby</h3>
+        <ul class="footer__links">
+          <li><a href="#">Automobilová asistence</a></li>
+          <li><a href="#">Domácí asistence</a></li>
+          <li><a href="#">Zdravotní asistence</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h3 class="footer__title">O nás</h3>
+        <ul class="footer__links">
+          <li><a href="#">O společnosti</a></li>
+          <li><a href="#">Dokumenty ke stažení</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h3 class="footer__title">Naše projekty</h3>
+        <ul class="footer__links">
+          <li><a href="#">Společenská odpovědnost</a></li>
+          <li><a href="#">Nebeští andělé</a></li>
+        </ul>
+      </div>
+
+        <div class="footer__column">
+        <h3 class="footer__title">Naše projekty</h3>
+        <ul class="footer__links">
+          <li><a href="#">Společenská odpovědnost</a></li>
+          <li><a href="#">Nebeští andělé</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__social">
+        <ul class="footer__social-link">
+            <li>
+                <a href="#">
+                    <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2.39819 11.9976H0V7.18842C0.642096 7.18842 1.27097 7.16748 1.89754 7.19613C2.28129 7.21376 2.37275 7.07222 2.37625 6.7076C2.38537 5.74155 2.34099 4.75958 2.49666 3.81336C2.84826 1.67711 4.1608 0.323706 6.30415 0.0873013C7.88145 -0.0866947 9.4933 0.0531445 11.1226 0.0531445V4.08472C10.3605 4.08472 9.61731 4.08452 8.87404 4.08483C7.66057 4.08523 7.37769 4.36981 7.37609 5.5954C7.37548 5.97936 7.40083 6.36462 7.37659 6.74697C7.35365 7.10748 7.5022 7.20605 7.84228 7.19904C8.76015 7.18041 9.67861 7.19002 10.5968 7.18862C10.7769 7.18832 10.9569 7.18852 11.2021 7.18852C11.053 8.80979 10.9088 10.3765 10.7594 12.0013H7.2105V24H2.39819V11.9976Z" fill="#0077D1"/></svg>
+                </a>
+            </li>
+           <li>
+                <a href="#">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.9761 10.1624L22.7186 0H20.6469L13.0558 8.82384L6.99289 0H0L9.16836 13.3432L0 24H2.07179L10.0881 14.6817L16.491 24H23.4839L13.9761 10.1624ZM11.1385 13.4608L10.2096 12.1321L2.81829 1.55962H6.00044L11.9653 10.0919L12.8942 11.4206L20.6479 22.5113H17.4657L11.1385 13.4608Z" fill="#0077D1"/></svg>
+                </a>
+            </li>
+             <li>
+                <a href="#">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.7264 24.0001H9.27454C9.25897 23.9966 9.24359 23.9905 9.22791 23.99C8.59393 23.9729 7.95972 23.9579 7.32587 23.9391C6.72253 23.9211 6.12195 23.8732 5.52759 23.7628C4.7887 23.6257 4.07727 23.4031 3.41864 23.0392C2.14044 22.3328 1.21558 21.3059 0.663086 19.9489C0.313965 19.0914 0.143005 18.1947 0.0915527 17.2753C0.0516968 16.5631 0.0379639 15.8494 0.0124512 15.1363C0.00897217 15.0412 0.00415039 14.9461 0 14.8509V9.14843C0.00360107 9.13261 0.00964355 9.11687 0.0100098 9.10104C0.0189819 8.70667 0.0236206 8.31213 0.036377 7.91791C0.0560913 7.31101 0.0748291 6.70402 0.148376 6.10016C0.229187 5.43695 0.374695 4.78956 0.617371 4.16603C1.21405 2.63326 2.25464 1.50804 3.73779 0.799522C4.58716 0.393819 5.49268 0.184743 6.42737 0.115988C7.1366 0.0637788 7.84839 0.0400037 8.55939 0.0161483C9.05371 -0.000478251 9.54889 8.3998e-05 10.0436 3.67674e-06C11.5494 -7.66445e-05 13.0554 0.00112817 14.5612 0.00667034C15.0682 0.00851773 15.5755 0.0205659 16.0825 0.035827C16.6894 0.0541402 17.2963 0.0740599 17.9001 0.147795C18.5614 0.228518 19.2065 0.374542 19.8287 0.614943C21.3087 1.18651 22.4113 2.18145 23.1298 3.59245C23.6082 4.53197 23.8296 5.54514 23.8977 6.59109C23.9418 7.26964 23.966 7.9498 23.9837 8.62964C24.0002 9.25366 24.0003 9.87815 23.9999 10.5025C23.9994 11.9267 23.9965 13.351 23.989 14.7753C23.9865 15.2845 23.9728 15.7937 23.9559 16.3027C23.938 16.8324 23.9166 17.3619 23.8522 17.8888C23.7675 18.5857 23.613 19.2651 23.3484 19.9165C22.7234 21.4559 21.6526 22.571 20.139 23.2544C19.2261 23.6666 18.2572 23.8561 17.2627 23.9074C16.4355 23.9501 15.6069 23.9633 14.7788 23.99C14.7614 23.9906 14.744 23.9966 14.7264 24.0001ZM12.007 2.16747C12.007 2.16314 12.0068 2.15888 12.0068 2.15454C10.7582 2.16651 9.5094 2.17125 8.26099 2.19374C7.68768 2.20402 7.11414 2.23864 6.54211 2.28121C5.97595 2.32338 5.42432 2.4453 4.89532 2.65735C3.91071 3.05213 3.19153 3.73012 2.74506 4.69197C2.44141 5.34611 2.30334 6.04362 2.26123 6.75775C2.21783 7.49285 2.19885 8.22956 2.17615 8.96578C2.16486 9.32884 2.16547 9.69237 2.16681 10.0557C2.17395 11.9477 2.1767 13.8398 2.19489 15.7317C2.20056 16.3112 2.24133 16.8909 2.28284 17.4693C2.31616 17.9322 2.40973 18.3863 2.55743 18.8277C2.96875 20.057 3.7724 20.9132 4.98718 21.3761C5.61768 21.6164 6.27667 21.7224 6.94574 21.7516C7.8172 21.7895 8.68958 21.8066 9.56165 21.8288C9.86432 21.8365 10.1672 21.8343 10.47 21.8337C11.9883 21.8301 13.5067 21.8328 15.0248 21.8182C15.7424 21.8113 16.4601 21.7779 17.1769 21.7422C17.7243 21.715 18.2631 21.6235 18.7868 21.4556C19.4105 21.2556 19.9644 20.9425 20.434 20.4786C20.9 20.0181 21.2246 19.4763 21.4325 18.8586C21.6288 18.2742 21.7244 17.671 21.7524 17.0589C21.7892 16.2564 21.8092 15.453 21.829 14.6499C21.8392 14.2365 21.8345 13.8228 21.8345 13.4093C21.8345 12.4005 21.8359 11.3916 21.8316 10.3828C21.829 9.69598 21.8262 9.00892 21.807 8.32241C21.7902 7.72611 21.7591 7.12972 21.7171 6.53462C21.6844 6.06964 21.5902 5.61366 21.4422 5.17036C21.0463 3.9833 20.2794 3.13888 19.1173 2.66289C18.4626 2.39478 17.7736 2.27944 17.0724 2.24787C16.2032 2.20868 15.333 2.18378 14.463 2.1702C13.6445 2.15743 12.8257 2.16747 12.007 2.16747Z" fill="#0077D1"/><path d="M12.0041 5.83744C15.3871 5.82756 18.191 8.59657 18.1634 12.0517C18.1363 15.437 15.3656 18.1924 11.9422 18.1625C8.53642 18.1328 5.7697 15.3235 5.83714 11.8738C5.90245 8.53263 8.64464 5.8254 12.0041 5.83744ZM8.00261 11.9982C8.00261 14.1975 9.78929 15.9927 11.9757 15.9985C14.1938 16.0044 15.987 14.2225 15.9979 12.0214C16.0088 9.79801 14.2227 8.03415 12.0648 8.00114C9.81438 7.96676 7.99809 9.78765 8.00261 11.9982Z" fill="#0077D1"/><path d="M19.8463 5.59393C19.8461 6.39489 19.1998 7.0373 18.3981 7.03368C17.6022 7.03007 16.9635 6.38822 16.9635 5.59208C16.9635 4.79666 17.6135 4.1467 18.4064 4.14942C19.2037 4.15216 19.8464 4.79682 19.8463 5.59393Z" fill="#0077D1"/></svg>
+                </a>
+            </li>
+             <li>
+                <a href="#">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.0595 8.38995C11.5125 7.7105 12.08 7.18201 12.7928 6.81171C13.8116 6.28246 14.8971 6.21892 16.0122 6.35235C16.844 6.45197 17.6174 6.70208 18.2802 7.2292C19.0511 7.84241 19.4519 8.68149 19.681 9.6129C19.924 10.6005 19.9967 11.6089 19.9983 12.6225C20.0016 14.9345 19.9993 17.2466 19.9988 19.5586C19.9988 19.9376 19.9974 19.9377 19.6085 19.9377C18.4707 19.9377 17.3328 19.9379 16.1948 19.9374C15.8358 19.9372 15.8347 19.9364 15.8347 19.5855C15.8342 17.4451 15.8397 15.3047 15.8312 13.1643C15.8285 12.4787 15.8058 11.7916 15.5557 11.1364C15.3175 10.5129 14.8875 10.0992 14.2224 10.0011C12.7241 9.78014 11.6657 10.3041 11.3484 11.8607C11.2891 12.1513 11.2557 12.4499 11.2427 12.7463C11.2231 13.188 11.2299 13.6311 11.2297 14.0736C11.2285 15.907 11.2294 17.7403 11.2289 19.5737C11.2288 19.9367 11.2278 19.9374 10.8787 19.9375C9.71362 19.9378 8.54859 19.9315 7.38367 19.9424C7.13953 19.9446 7.05823 19.8779 7.05872 19.6247C7.0658 15.3981 7.06616 11.1715 7.05847 6.94488C7.05799 6.67632 7.14746 6.61151 7.40051 6.61414C8.51135 6.62574 9.62244 6.62684 10.733 6.61363C11.0023 6.6104 11.0731 6.70563 11.0642 6.95888C11.0475 7.43533 11.0595 7.9129 11.0595 8.38995Z" fill="#0077D1"/><path d="M0.335586 13.2868C0.335586 11.1749 0.339614 9.06276 0.32997 6.95076C0.32875 6.68974 0.405044 6.6112 0.66542 6.61383C1.83864 6.62595 3.01222 6.62502 4.18519 6.61442C4.43361 6.61222 4.51002 6.69194 4.50978 6.93916C4.5038 11.1722 4.5038 15.4054 4.5099 19.6384C4.51039 19.8789 4.43361 19.9444 4.19862 19.9423C3.01625 19.9316 1.83375 19.9308 0.651626 19.9427C0.402602 19.9453 0.329604 19.871 0.330581 19.6229C0.339248 17.5109 0.335586 15.3988 0.335586 13.2868Z" fill="#0077D1"/><path d="M4.81651 2.43532C4.78844 3.79856 3.71153 4.84342 2.35985 4.8191C1.03954 4.79529 -0.0343169 3.67393 0.000839323 2.35551C0.0351411 1.05539 1.16368 -0.0275936 2.4547 0.000535935C3.77061 0.0292568 4.84312 1.13494 4.81651 2.43532Z" fill="#0077D1"/></svg>
+                </a>
+            </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <small>© 2024 GLOBAL ASSISTANCE a.s.</small>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
