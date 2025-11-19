@@ -4,12 +4,12 @@ $font-base: "Inter", system-ui, sans-serif;
 // FONT SIZES 
 $fs-sm: rem(14);
 $fs-md: rem(16);
-$fs-lg: rem(18);
-$fs-xl: rem(24);
+$fs-lg: rem(24);
+$fs-xl: rem(40);
 $fs-xxl: rem(80);
 
 // COLORS
-$color-primary: #0064d3;
+$color-primary: #0077D1;
 $color-primary-light: #e6f1ff;
 $color-secondary: #00a868;
 $color-accent: #ffc400;
@@ -40,4 +40,6 @@ $space-top: rem(80);
 $bp-sm: 480px;
 $bp-md: 768px;
 $bp-lg: 1280px;
+$bp-lgm: 1568px;
 $bp-xl: 1568px;
+$bp-xxl: 2068px;

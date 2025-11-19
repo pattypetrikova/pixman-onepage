@@ -23,9 +23,10 @@
         margin-bottom: rem(12);
     }
 
-   &__decor {
-        margin: 0 auto; 
-        width: fit-content; 
+    &__decor {
+
+        margin: 0 auto;
+        width: fit-content;
         margin-top: rem(12);
     }
 }
@@ -56,21 +57,13 @@
     align-items: center;
     justify-content: center;
     gap: rem(8);
-
-    padding: rem(10) rem(24); // něco jako 14px x 24px ve Figmě
+    padding: $space-2 rem(32);
     border-radius: $radius-pill;
-    border: rem(1) solid transparent;
-
-    font-size: $fs-sm;
-    font-weight: 500;
-    line-height: 1.2;
+    border: rem(2) solid transparent;
     cursor: pointer;
-
+    font-size: $fs-md;
     background-color: transparent;
-    color: $color-primary;
-
-    text-decoration: none; // i pro <a>
-    white-space: nowrap;
+    color: $color-text;
 
     transition:
         background-color 0.2s ease,
@@ -89,37 +82,34 @@
     }
 }
 
-// hlavní outline button (např. "Všechny služby", "Více informací")
-.btn--outline {
-    background-color: #fff;
-    color: $color-primary;
+.btn--primary {
+    background-color: $color-bg;
     border-color: $color-primary;
-    box-shadow: 0 rem(4) rem(12) rgba(0, 0, 0, 0.06);
 
     &:hover {
         background-color: $color-primary-light;
+        border-color: $color-primary;
     }
 }
 
-// plné modré tlačítko – můžeš použít třeba pro hotline nebo speciální CTA
-.btn--primary {
+
+.btn--full {
     background-color: $color-primary;
-    color: #fff;
+    color: $color-bg;
     border-color: $color-primary;
     box-shadow: 0 rem(6) rem(18) rgba(0, 0, 0, 0.12);
 
     &:hover {
         background-color: darken($color-primary, 5%);
+        border-color: darken($color-primary, 5%);
     }
 }
 
-// menší varianta – když bude potřeba v kartách nebo footeru
 .btn--sm {
-    padding: rem(6) rem(16);
+    padding: rem(8) rem(20);
     font-size: $fs-sm;
 }
 
-// ikona v buttonu (pro šipky apod.)
 .btn__icon {
     display: inline-flex;
     align-items: center;
