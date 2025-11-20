@@ -1,0 +1,230 @@
+
+.testimonials {
+    background-color: $color-bg;
+    box-shadow: $shadow-section;
+    position: relative;
+
+    @media (min-width: $bp-lg) {
+        padding-right: 0;
+    }
+
+    &__wrap {
+        min-width: rem(255);
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: $space-3;
+
+        @media (min-width: $bp-lg) {
+            gap: rem(32);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: rem(32);
+
+        @media (min-width: $bp-lg) {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr);
+            gap: $space-5;
+        }
+    }
+
+    &__summary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__rating {
+        display: flex;
+        gap: rem(60);
+        margin-bottom: $space-5;
+        align-items: center;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__summary-title {
+        font-size: $fs-md;
+        font-weight: 500;
+        margin-bottom: $space-2;
+    }
+
+    &__cta {
+        margin-top: rem(12);
+    }
+
+    &__slider {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__track {
+        display: flex;
+        gap: $space-3;
+        transition: transform 0.4s ease;
+    }
+
+    &__nav {
+        width: rem(36);
+        height: rem(36);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $radius-pill;
+        border: rem(1) solid $color-border;
+        background-color: $color-bg;
+        box-shadow: 0 rem(6) rem(18) rgba(0, 0, 0, 0.06);
+        font-size: rem(24);
+        color: $color-primary;
+        transition: all 0.2s;
+
+        &:hover,
+        &:focus-visible {
+            border-color: $color-primary;
+        }
+    }
+}
+
+// rating blok
+.rating {
+    &-bars {
+        display: flex;
+        flex-direction: column;
+        gap: rem(3);
+        margin-bottom: $space-2;
+
+        &__row {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: $space-2;
+            align-items: center;
+
+            >span {
+                font-size: $fs-sm;
+            }
+
+            >div {
+                height: rem(8);
+                background-color: $color-bg-light;
+                border-radius: $radius-pill;
+                position: relative;
+                overflow: hidden;
+            }
+        }
+
+        &__fill {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background-color: $color-accent;
+
+            &--full {
+                width: 100%;
+            }
+
+            &--medium {
+                width: 6%;
+            }
+
+            &--small {
+                width: 3%;
+            }
+        }
+    }
+
+    &__score {
+        font-size: rem(52);
+        font-weight: 700;
+        color: $color-text;
+        line-height: 1;
+    }
+
+    &__text {
+        font-size: $fs-md;
+        font-weight: 600;
+    }
+
+    &--stars {
+        color: $color-accent;
+        margin-block: rem(4);
+        font-size: rem(24);
+    }
+}
+
+.card {
+    &--testimonial {
+        flex: 0 0 100%;
+        background-color: $color-bg;
+        border-radius: $radius-lg;
+        border: rem(1) solid $color-border;
+        box-shadow: 0 rem(10) rem(30) rgba(0, 0, 0, 0.06);
+        padding: rem(20);
+
+        @media (min-width: $bp-md) {
+            flex-basis: 80%;
+        }
+
+        @media (min-width: $bp-lg) {
+            flex-basis: 40%; // 2,5 cards
+            padding: $space-3;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+    }
+
+    &__quote {
+        font-size: $fs-lg;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__author {
+        font-size: $fs-sm;
+        color: $color-text;
+    }
+}
+
+.slider-dots {
+    display: flex;
+    gap: $space-1;
+    margin-top: $space-3;
+    justify-content: space-between;
+    padding-right: rem(20);
+
+    @media (min-width: $bp-lg) {
+        padding-right: rem(40);
+    }
+
+    &__dot {
+        width: rem(8);
+        height: rem(8);
+        padding: 0;
+        border-radius: 50%;
+        background-color: $color-border;
+        border: none;
+
+        &.is-active {
+            background-color: $color-primary;
+        }
+    }
+}
+
+.slider__wrap {
+    display: flex;
+    gap: rem(10);
+}
