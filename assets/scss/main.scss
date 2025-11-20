@@ -2,5 +2,13 @@
 @import "variables";
 @import "base";
 @import "layout";
-@import "components";
 @import "partials";
+
+//import sections
+@import "sections/header";
+@import "sections/hero";
+@import "sections/navigation";
+@import "sections/services";
+@import "sections/testimonials";
+@import "sections/contact";
+@import "sections/footer";

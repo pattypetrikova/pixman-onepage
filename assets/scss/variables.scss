@@ -1,12 +1,42 @@
-// FONT
-$font-base: "Inter", system-ui, sans-serif;
+/* ------------------------------
+   FONTS
+------------------------------ */
 
-// FONT SIZES 
-$fs-sm: rem(14);
-$fs-md: rem(16);
-$fs-lg: rem(24);
-$fs-xl: rem(40);
-$fs-xxl: rem(80);
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+// FONT SETUP
+$font-base: "Open Sans", system-ui, sans-serif;
+$font-title: "Ubuntu", system-ui, sans-serif;
 
 // COLORS
 $color-primary: #0077D1;
@@ -19,8 +49,13 @@ $color-bg: #ffffff;
 $color-bg-light: #f6f9fc;
 $color-border: #e5e9ef;
 
+// GRADIENTS
+$gradient-primary: linear-gradient(to bottom, #0077d1 0%, #004fa8 100%);
+
 // SHADOWS
 $shadow-card: 0 rem(8) rem(32) rgba(0, 0, 0, 0.05);
+$shadow-service: 0 rem(6) rem(4) rgba(78, 131, 180, 0.12);
+$shadow-section: 0 rem(6) rem(4) rgba(78, 131, 180, 0.103), 0 rem(-6) rem(4) rgba(78, 131, 180, 0.12);
 
 // RADIUS
 $radius-sm: 8px;
@@ -43,3 +78,29 @@ $bp-lg: 1280px;
 $bp-lgm: 1568px;
 $bp-xl: 1568px;
 $bp-xxl: 2068px;
+
+
+// FONT SIZES RESPONSIVE
+:root {
+    --fs-sm: #{rem(13)};
+    --fs-md: #{rem(15)};
+    --fs-lg: #{rem(20)};
+    --fs-xl: #{rem(30)};
+    --fs-xxl: #{rem(56)};
+}
+
+@media (min-width: $bp-lg) {
+    :root {
+        --fs-sm: #{rem(14)};
+        --fs-md: #{rem(16)};
+        --fs-lg: #{rem(24)};
+        --fs-xl: #{rem(40)};
+        --fs-xxl: #{rem(80)};
+    }
+}
+
+$fs-sm: var(--fs-sm);
+$fs-md: var(--fs-md);
+$fs-lg: var(--fs-lg);
+$fs-xl: var(--fs-xl);
+$fs-xxl: var(--fs-xxl);

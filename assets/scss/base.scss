@@ -49,8 +49,9 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-weight: 700;
+  font-weight: 400;
   color: $color-text;
+  font-family: $font-title;
 }
 
 h1 {
@@ -67,23 +68,16 @@ h3 {
 
 h4 {
   font-size: $fs-md;
+  font-weight: 600;
 }
 
-// Sekční titulky (např. „Další služby“, „Napsali o nás“)
 .section__title {
   text-align: center;
   font-size: $fs-xl;
-  margin-bottom: rem(32);
-}
-
-// Menší nadpisy v kartách apod.
-.card__title {
-  font-size: $fs-lg;
-  font-weight: 600;
-  margin-bottom: rem(8);
+  margin-bottom: rem(10);
 }
 
 .card__text {
-  font-size: $fs-sm;
-  color: $color-text-muted;
+  font-size: $fs-md;
+  color: $color-text;
 }

@@ -13,6 +13,18 @@
 	@media (min-width: $bp-lg) {
 		padding-block: rem(80) rem(120);
     }
+
+	&--small {
+		padding: rem(20) rem(20) rem(40) rem(20);
+
+		@media (min-width: $bp-md) {
+			padding: rem(40) rem(40) rem(80) rem(40);
+		}
+
+		@media (min-width: $bp-lg) {
+			padding-block: rem(60) rem(40);
+		}
+	}
 }
 
 .skip-link {
@@ -28,4 +40,9 @@
 	left: rem(16);
 	top: rem(16);
 	z-index: 1000;
+}
+
+
+input::placeholder {
+  font-size: $fs-md;
 }
