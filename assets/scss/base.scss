@@ -71,6 +71,12 @@ h4 {
   font-weight: 600;
 }
 
+
+select {
+  appearance: none;
+  padding: rem(12) rem(50) rem(12) $space-2;
+}
+
 .section__title {
   text-align: center;
   font-size: $fs-xl;
