@@ -126,9 +126,10 @@
       ========================================================== -->
                 <div class="hero__cards hero__cards--mobile">
                     <article class="card card--service">
-                        <div class="card__image--mobile">
+                        <picture class="card__image--mobile">
+                            <source srcset="assets/images/call.webp" type="image/webp">
                             <img src="assets/images/call.png" alt="Muž volající kvůli havárii vody v domácnosti">
-                        </div>
+                        </picture>
 
                         <div class="card__wrap">
                             <div class="card__body">
@@ -152,8 +153,9 @@
                 <div class="hero__cards hero__cards--desktop">
                     <article class="card card--service card--service--motor">
                         <picture class="card__image">
+                            <source media="(min-width: 2000px)" srcset="assets/images/car-xxl.webp" type="image/webp">
                             <source media="(min-width: 2000px)" srcset="assets/images/car-xxl.png">
-
+                            <source srcset="assets/images/car.webp" type="image/webp">
                             <img src="assets/images/car.png" alt="Odtah havarovaného auta na odtahovém voze">
                         </picture>
 
@@ -163,9 +165,10 @@
                     </article>
 
                     <article class="card card--service card--service--health">
-                        <div class="card__image">
+                        <picture class="card__image">
+                            <source srcset="assets/images/hospital.webp" type="image/webp">
                             <img src="assets/images/hospital.png" alt="Pacientka odpočívající v nemocniční posteli">
-                        </div>
+                        </picture>
 
                         <div class="card__body">
                             <h3 class="card__title">Zdravotní asistence</h3>
@@ -179,8 +182,9 @@
 
                     <article class="card card--service card--service--home">
                         <picture class="card__image">
+                            <source media="(min-width: 2000px)" srcset="assets/images/call-xxl.webp" type="image/webp">
                             <source media="(min-width: 2000px)" srcset="assets/images/call-xxl.png">
-
+                            <source srcset="assets/images/call.webp" type="image/webp">
                             <img src="assets/images/call.png" alt="Muž volající kvůli havárii vody v domácnosti">
                         </picture>
 
@@ -219,7 +223,10 @@
                 <div class="services__grid">
                     <article class="card card--service">
                         <div class="card__image">
-                            <img src="assets/images/law.jpg" alt="Socha spravedlnosti s vahami">
+                            <picture class="card__image">
+                                <source srcset="assets/images/law.webp" type="image/webp">
+                                <img src="assets/images/law.jpg" alt="Socha spravedlnosti s vahami" loading="lazy">
+                            </picture>
                         </div>
                         <div class="card__body">
                             <h3 class="card__title">Právní asistence</h3>
@@ -229,7 +236,10 @@
 
                     <article class="card card--service">
                         <div class="card__image">
-                            <img src="assets/images/checkin.jpg" alt="Recepční vítá klientku u pultu">
+                            <picture class="card__image">
+                                <source srcset="assets/images/checkin.webp" type="image/webp">
+                                <img src="assets/images/checkin.jpg" alt="Recepční vítá klientku u pultu" loading="lazy">
+                            </picture>
                         </div>
                         <div class="card__body">
                             <h3 class="card__title">Concierge asistenční služby</h3>
@@ -240,7 +250,10 @@
 
                     <article class="card card--service">
                         <div class="card__image">
-                            <img src="assets/images/map.jpg" alt="Mapa s ikonami dopravy a dopravní situace">
+                            <picture class="card__image">
+                                <source srcset="assets/images/map.webp" type="image/webp">
+                                <img src="assets/images/map.jpg" alt="Mapa s ikonami dopravy a dopravní situace" loading="lazy">
+                            </picture>
                         </div>
                         <div class="card__body">
                             <h3 class="card__title">Informační servis</h3>
@@ -448,9 +461,9 @@
                 <!-- DOTS -->
                 <div class="slider-dots container">
                     <div class="slider__wrap">
-                        <button class="slider-dots__dot is-active"></button>
-                        <button class="slider-dots__dot"></button>
-                        <button class="slider-dots__dot"></button>
+                        <button class="slider-dots__dot is-active" aria-label="Zobrazit první recenzi"></button>
+                        <button class="slider-dots__dot" aria-label="Zobrazit druhou recenzi"></button>
+                        <button class="slider-dots__dot" aria-label="Zobrazit třetí recenzi"></button>
                     </div>
                     <div class="slider__wrap">
                         <button class="testimonials__nav testimonials__nav--prev" type="button"
