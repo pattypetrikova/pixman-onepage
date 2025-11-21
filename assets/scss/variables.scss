@@ -75,8 +75,7 @@ $space-top: rem(80);
 $bp-sm: 480px;
 $bp-md: 768px;
 $bp-lg: 1280px;
-$bp-lgm: 1568px;
-$bp-xl: 1568px;
+$bp-xl: 1538px;
 $bp-xxl: 2068px;
 
 
@@ -86,7 +85,7 @@ $bp-xxl: 2068px;
     --fs-md: #{rem(15)};
     --fs-lg: #{rem(20)};
     --fs-xl: #{rem(30)};
-    --fs-xxl: #{rem(56)};
+    --fs-xxl: #{rem(45)};
 }
 
 @media (min-width: $bp-lg) {

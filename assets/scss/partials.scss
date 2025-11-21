@@ -2,18 +2,6 @@
     text-align: center;
     margin-bottom: rem(40);
 
-    &--left {
-        text-align: left;
-    }
-
-    &__eyebrow {
-        font-size: $fs-sm;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: $color-text-muted;
-        margin-bottom: rem(8);
-    }
-
     &__title {
         font-size: $fs-xl;
         color: $color-text;
@@ -37,22 +25,15 @@
     padding: $space-2 rem(32);
     border-radius: $radius-pill;
     border: rem(2) solid transparent;
-    cursor: pointer;
     font-size: $fs-md;
     background-color: transparent;
     color: $color-text;
 
     transition:
-        background-color 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.1s ease;
-
-    &:focus-visible {
-        outline: rem(3) solid rgba($color-primary, 0.4);
-        outline-offset: rem(2);
-    }
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
 
     &:active {
         transform: translateY(rem(1));
@@ -65,6 +46,8 @@
         &:hover {
             background-color: $color-primary-light;
             border-color: $color-primary;
+            color: $color-primary;
+            transform: translateY(rem(-2));
         }
     }
 
@@ -81,8 +64,13 @@
     }
 
     &--sm {
-            padding: rem(8) rem(20);
+        padding: rem(8) rem(20);
         font-size: $fs-sm;
+    }
+
+    &--md {
+        padding: rem(12) rem(26);
+        font-size: $fs-md;
     }
 
     &__icon {

@@ -6,9 +6,9 @@
 
     &__toggle {
         width: rem(32);
+        border: none;
         height: rem(32);
         border-radius: 50%;
-        border: rem(1) solid $color-border;
         background-color: $color-bg;
         display: inline-flex;
         align-items: center;

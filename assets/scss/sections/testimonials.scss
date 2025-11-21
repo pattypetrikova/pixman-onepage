@@ -4,12 +4,16 @@
     box-shadow: $shadow-section;
     position: relative;
 
-    @media (min-width: $bp-lg) {
+    @media (min-width: $bp-md) {
         padding-right: 0;
     }
 
     &__wrap {
-        min-width: rem(255);
+        min-width: rem(150);
+
+        @media (min-width: $bp-sm) {
+            min-width: rem(255);
+        }
     }
 
     &__inner {
@@ -42,9 +46,13 @@
 
     &__rating {
         display: flex;
-        gap: rem(60);
+        gap: rem(20);
         margin-bottom: $space-5;
         align-items: center;
+
+        @media (min-width: $bp-sm) {
+            gap: rem(60);
+        }
     }
 
     &__block {
@@ -75,8 +83,8 @@
     }
 
     &__nav {
-        width: rem(36);
-        height: rem(36);
+        width: rem(40);
+        height: rem(40);
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -84,9 +92,19 @@
         border: rem(1) solid $color-border;
         background-color: $color-bg;
         box-shadow: 0 rem(6) rem(18) rgba(0, 0, 0, 0.06);
-        font-size: rem(24);
+        font-size: rem(30);
         color: $color-primary;
         transition: all 0.2s;
+       
+        & > span {
+            margin-top: -4px;
+        }
+
+        &--next {
+            & > span {
+                margin-right: -3px;
+            }
+        }
 
         &:hover,
         &:focus-visible {
@@ -95,7 +113,6 @@
     }
 }
 
-// rating blok
 .rating {
     &-bars {
         display: flex;
@@ -163,12 +180,26 @@
 
 .card {
     &--testimonial {
+        position: relative;
         flex: 0 0 100%;
         background-color: $color-bg;
         border-radius: $radius-lg;
         border: rem(1) solid $color-border;
         box-shadow: 0 rem(10) rem(30) rgba(0, 0, 0, 0.06);
         padding: rem(20);
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: $space-3;
+            right: $space-3;
+            width: rem(35);
+            height: rem(25);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url("../svg/quote.svg");
+        }
 
         @media (min-width: $bp-md) {
             flex-basis: 80%;
@@ -201,12 +232,11 @@
 
 .slider-dots {
     display: flex;
-    gap: $space-1;
-    margin-top: $space-3;
+    align-items: center;;
     justify-content: space-between;
-    padding-right: rem(20);
 
-    @media (min-width: $bp-lg) {
+    @media (min-width: $bp-md) {
+            margin-top: $space-3;
         padding-right: rem(40);
     }
 

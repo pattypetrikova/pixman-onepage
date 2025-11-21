@@ -1,6 +1,4 @@
-
 .hero {
-    background: linear-gradient(to bottom, $color-bg-light 0%, $color-bg 55%);
     padding-block: $space-5;
     overflow: hidden;
 
@@ -42,62 +40,65 @@
 
         @media (min-width: $bp-md) {
             font-size: rem(48);
-
             margin-bottom: rem(32);
             white-space: nowrap;
             margin-left: 15%;
-            ;
         }
 
         @media (min-width: $bp-lg) {
             font-size: rem(56);
         }
+
+        @media (min-width: $bp-xl) {
+            font-size: rem(80);
+        }
+    }
+
+    &__cards {
+        width: 100%;
+        margin-top: $space-2;
     }
 
     &__cards--mobile {
         display: flex;
-        width: 100%;
-        margin-top: $space-2;
         flex-direction: column;
 
-        @media (min-width: $bp-md) {
-            .card__body:nth-of-type(1) {
-            top: rem(50);
-            left: rem(60);
-            }
-
-            .card__body:nth-of-type(2) {
-            top: rem(160);
-            left: rem(20);
-            }
-
-            .card__body:nth-of-type(3) {
-                top: rem(270);
-            }
+        .card--service {
+            position: relative;
         }
-        
 
-        @media (min-width: $bp-lg) {
-            display: none;
+        .card__image--mobile {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+
+            img {
+                height: 100%;
+                object-fit: contain;
+                max-height: rem(600);
+            }
         }
 
         .card__body {
             position: absolute;
             padding: rem(10);
+            border-radius: $radius-pill;
+            background-color: $color-bg;
         }
 
-        .card__body:nth-of-type(1) {
+        .card__wrap .card__body:nth-of-type(1) {
             top: rem(50);
             left: rem(60);
         }
 
-        .card__body:nth-of-type(2) {
+        .card__wrap .card__body:nth-of-type(2) {
             top: rem(160);
             left: rem(20);
         }
 
-        .card__body:nth-of-type(3) {
+        .card__wrap .card__body:nth-of-type(3) {
             top: rem(270);
+            left: rem(40);
         }
 
         .card__title {
@@ -111,38 +112,30 @@
                 font-size: rem(26);
             }
         }
+
+        @media (min-width: $bp-md) {
+            display: none;
+        }
     }
 
     &__cards--desktop {
         display: none;
-        width: 100%;
-        margin-top: $space-2;
 
-        @media (min-width: $bp-lg) {
+        @media (min-width: $bp-md) {
             display: flex;
             flex-direction: row;
             justify-content: center;
             gap: 0;
         }
-    }
 
-    .card {
-        &__wrap {
-            display: flex;
-            flex-direction: column;
-            gap: rem(10);
-            padding: $space-2;
-        }
-
-        &--service {
+        .card--service {
             position: relative;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             min-height: auto;
             border-radius: $radius-md;
 
-            @media (min-width: $bp-lg) {
+            @media (min-width: $bp-md) {
                 min-height: rem(260);
                 max-height: rem(550);
                 display: block;
@@ -172,7 +165,7 @@
             }
         }
 
-        &__image {
+        .card__image {
             height: rem(180);
 
             img {
@@ -181,53 +174,86 @@
                 object-fit: contain;
             }
 
-            @media (min-width: $bp-lg) {
+            @media (min-width: $bp-md) {
                 height: 100%;
-            }
-
-            &--mobile {
-                position: relative;
-                display: flex;
-                justify-content: end;
             }
         }
 
-        &__body {
+        .card__body {
             border-radius: $radius-pill;
             padding: $space-2;
             background-color: $color-bg;
 
-            @media (min-width: $bp-lg) {
+            @media (min-width: $bp-md) {
                 position: absolute;
+                bottom: $space-2;
                 border: none;
                 white-space: nowrap;
-                left: 45%;
-                padding: $space-3;
-                bottom: $space-3;
                 transform: translateX(-45%);
-                background-color: $color-bg;
-                border-radius: $radius-pill;
                 padding: rem(10) $space-3;
                 text-align: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: rem(6);
+                gap: rem(12);
 
                 .card__title {
-                    font-size: $fs-lg;
+                    font-size: rem(15);
                     font-weight: 500;
-                    color: $color-text;
                     margin: 0;
                 }
 
                 .card__text {
-                    margin: 0;
+                   display: none;
                 }
 
                 .btn {
                     margin-top: rem(4);
                 }
+            }
+
+            @media (min-width: $bp-lg) {
+                .card__text {
+                    display: block;
+                    margin: 0;
+                    max-width: rem(290);
+                    white-space: normal;
+                }
+
+                .card__title {
+                    font-size: rem(20);
+                }
+            }
+        }
+
+        .card--service--motor .card__body {
+            @media (min-width: $bp-md) {
+                left: 35%;
+            }
+        }
+
+        .card--service--health .card__body {
+            @media (min-width: $bp-md) {
+                left: 38%;
+                background-image: url("../images/bg-baner.png");
+                background-color: transparent;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center rem(20);
+                width: 90%;
+                padding: rem(30) 0 rem(20) 0;
+                bottom: 0;
+                border-radius: 0;
+            }
+
+            @media (min-width: $bp-lg) {
+                background-position: center rem(10);
+            }
+        }
+
+        .card--service--home .card__body {
+            @media (min-width: $bp-md) {
+                left: 45%;
             }
         }
     }

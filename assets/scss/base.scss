@@ -39,7 +39,6 @@ ol {
 p {
   margin-top: 0;
   margin-bottom: rem(12);
-  color: $color-text-muted;
 }
 
 h1,
@@ -64,6 +63,7 @@ h2 {
 
 h3 {
   font-size: $fs-lg;
+  font-weight: 500;
 }
 
 h4 {

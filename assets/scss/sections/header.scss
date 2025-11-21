@@ -4,6 +4,13 @@
     top: 0;
     z-index: 50;
 
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: rem(10);
+    }
+
     &__info {
         display: none;
         flex-wrap: wrap;
