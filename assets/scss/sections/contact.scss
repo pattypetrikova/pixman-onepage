@@ -60,7 +60,7 @@
     &__group {
         display: flex;
         flex-direction: column;
-        gap: rem(4);
+        gap: $space-1;
 
         &--phone {
             display: flex;
@@ -103,11 +103,6 @@
 
     &__submit {
         align-self: flex-start;
-        margin-top: $space-1;
-
-        @media (min-width: $bp-md) {
-            margin-top: $space-2;
-        }
     }
 
     &__message {
@@ -150,6 +145,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: $space-2;
+
+        @media (min-width: $bp-md) {
+            margin-top: $space-5;
+        }
     }
 
     &__info {
@@ -159,30 +159,26 @@
         margin-left: $space-1;
 
         &-icon {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
             width: rem(20);
             height: rem(20);
-            border-radius: 50%;
-            background: #212c34;
-            color: white;
-            font-size: rem(12);
-            cursor: pointer;
+            margin-top: rem(15);
         }
 
         &-tooltip {
             display: none;
             position: absolute;
-            bottom: 0%;
-            right: rem(-220);
-            transform: translateX(-50%);
+            bottom: rem(-60);
+            left: rem(-200);
             padding: $space-1 rem(12);
-            background: #fff;
-            border: 1px solid #ccc;
+            background: $color-bg;
+            border: 1px solid $color-border;
             border-radius: $radius-sm;
-            font-size: rem(14);
-            white-space: nowrap;
+            font-size: $fs-sm;
+
+            @media (min-width: $bp-md) {
+                white-space: nowrap;
+            }
+
         }
 
         &:hover &-tooltip {
