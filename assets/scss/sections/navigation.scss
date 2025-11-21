@@ -14,6 +14,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        z-index: 2000;
 
         &::before,
         &::after {
@@ -23,7 +24,7 @@
             background-color: $color-text;
             border-radius: $radius-pill;
             position: absolute;
-            transition: transform 0.2s ease, opacity 0.2s ease;
+            transition: transform 0.25s ease, opacity 0.25s ease;
         }
 
         &::before {
@@ -46,24 +47,27 @@
         position: fixed;
         inset: 0;
         background-color: $color-bg;
-        display: none;
+
+        display: flex;
         flex-direction: column;
         gap: $space-2;
         align-items: center;
         justify-content: flex-start;
-        z-index: 80;
+
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.35s ease, opacity 0.35s ease;
 
         @media (min-width: $bp-lg) {
             position: static;
-            inset: auto;
             background: transparent;
-            box-shadow: none;
             padding: 0;
-            display: flex;
+            opacity: 1;
             flex-direction: row;
             gap: $space-3;
             align-items: center;
             justify-content: flex-end;
+            transform: none;
         }
     }
 
@@ -105,7 +109,15 @@
 
     &--open {
         .nav__list {
-            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+            z-index: 1000;
+            background-color: $color-primary;
+        }
+
+        .nav__link {
+            color: $color-bg;
+            font-size: rem(25);
         }
 
         .nav__toggle::before {

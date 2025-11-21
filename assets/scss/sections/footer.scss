@@ -1,4 +1,3 @@
-
 .footer {
     &__top {
         display: grid;
@@ -57,16 +56,21 @@
 
     &__bottom {
         background-color: $color-text;
-        color: $color-border;
-        padding-block: rem(12);
+        color: $color-bg;
+        padding-block: rem(25);
         font-size: $fs-sm;
 
-        .container {
+        &-wrap {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: rem(12);
             flex-wrap: wrap;
+
+            &>p {
+                color: $color-bg;
+                margin: 0;
+            }
         }
     }
 }
