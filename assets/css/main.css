@@ -992,7 +992,7 @@ input::placeholder {
 @media (min-width: 768px) {
   .slider-dots {
     margin-top: calc(1.5 * 1rem);
-    padding-right: calc(2.5 * 1rem);
+    padding: 0 calc(2.5 * 1rem);
   }
 }
 .slider-dots__dot {
