@@ -1,5 +1,5 @@
 .container {
-	max-width: rem(1568);
+	width: min(rem(1568), 100%);
 	margin-inline: auto;
 }
 

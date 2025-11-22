@@ -136,7 +136,7 @@ select {
 }
 
 .container {
-  max-width: calc(98 * 1rem);
+  width: min(98 * 1rem, 100%);
   margin-inline: auto;
 }
 
@@ -988,7 +988,6 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-inline: 0;
 }
 @media (min-width: 768px) {
   .slider-dots {
