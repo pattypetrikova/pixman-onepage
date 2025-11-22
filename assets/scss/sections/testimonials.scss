@@ -110,6 +110,12 @@
         &:focus-visible {
             border-color: $color-primary;
         }
+
+           &.is-disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
     }
 }
 
@@ -235,6 +241,7 @@
     display: flex;
     align-items: center;;
     justify-content: space-between;
+    margin-inline: 0;
 
     @media (min-width: $bp-md) {
             margin-top: $space-3;

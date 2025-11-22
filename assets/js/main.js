@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
     dots.forEach((dot, i) => {
       dot.classList.toggle("is-active", i === currentIndex);
     });
+
+       if (prevBtn && nextBtn) {
+      prevBtn.classList.toggle("is-disabled", currentIndex === 0);
+      nextBtn.classList.toggle("is-disabled", currentIndex === cards.length - 1);
+    }
   }
 
   nextBtn?.addEventListener("click", () => {
@@ -61,4 +66,23 @@ document.addEventListener("DOMContentLoaded", () => {
             toggle.setAttribute("aria-expanded", "false");
         });
     });
+});
+
+// scroll to hash custom 
+document.addEventListener("click", e => {
+  const a = e.target.closest('a[href^="#"]');
+
+  if (!a || a.getAttribute("href").length < 2) return;
+
+  const el = document.querySelector(a.getAttribute("href"));
+
+  if (!el) return;
+  e.preventDefault();
+
+  const offset = window.innerWidth < 768 ? -70 : -120;
+
+  window.scrollTo({
+    top: el.offsetTop + offset,
+    behavior: "smooth"
+  });
 });

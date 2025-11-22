@@ -50,7 +50,8 @@ $color-bg-light: #f6f9fc;
 $color-border: #e5e9ef;
 
 // GRADIENTS
-$gradient-primary: linear-gradient(to bottom, #0077d1 0%, #004fa8 100%);
+$gradient-primary: linear-gradient(to left, #0077d1 0%, #004fa8 100%);
+$gradient-primary--dark: linear-gradient(to left, #085794 0%, #022d5e 100%);
 
 // SHADOWS
 $shadow-card: 0 rem(8) rem(32) rgba(0, 0, 0, 0.05);
@@ -58,10 +59,10 @@ $shadow-service: 0 rem(6) rem(4) rgba(78, 131, 180, 0.12);
 $shadow-section: 0 rem(6) rem(4) rgba(78, 131, 180, 0.103), 0 rem(-6) rem(4) rgba(78, 131, 180, 0.12);
 
 // RADIUS
-$radius-sm: 8px;
-$radius-md: 16px;
-$radius-lg: 24px;
-$radius-pill: 999px;
+$radius-sm: rem(8);
+$radius-md: rem(16);
+$radius-lg: rem(24);
+$radius-pill: rem(999);
 
 // SPACING SCALE
 $space-1: rem(8);

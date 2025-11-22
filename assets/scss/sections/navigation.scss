@@ -52,7 +52,8 @@
         justify-content: center;
         transform: translateY(-100%);
         opacity: 0;
-        transition: transform 0.35s ease, opacity 0.35s ease;
+        transition: transform 0.35s ease;
+        z-index: 1000;
 
         @media (min-width: $bp-lg) {
             position: static;
@@ -75,6 +76,12 @@
         color: $color-text-muted;
         position: relative;
         text-decoration: none;
+        opacity: 0;
+        transition: opacity 0.35s ease;
+
+        @media (min-width: $bp-md) {
+            opacity: 1;
+        }
 
         @media (min-width: $bp-lg) {
             padding: rem(4) 0;
@@ -89,7 +96,7 @@
             height: rem(2);
             border-radius: $radius-pill;
             background-color: $color-primary;
-            transition: width 0.2s ease;
+            transition: width 0.5s ease;
         }
 
         &:hover,
@@ -107,13 +114,14 @@
         .nav__list {
             transform: translateY(0);
             opacity: 1;
-            z-index: 1000;
             background-color: $color-primary;
+            padding-top: 0;
         }
 
         .nav__link {
             color: $color-bg;
             font-size: rem(25);
+            opacity: 1;
         }
 
 

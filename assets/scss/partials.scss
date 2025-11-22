@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .section-heading {
     text-align: center;
     margin-bottom: rem(40);
@@ -28,6 +30,7 @@
     font-size: $fs-md;
     background-color: transparent;
     color: $color-text;
+    cursor: pointer;
 
     transition:
         background-color 0.3s ease,
@@ -52,19 +55,25 @@
     }
 
     &--full {
-    background-color: $color-primary;
-    color: $color-bg;
-    border-color: $color-primary;
-    box-shadow: 0 rem(6) rem(18) rgba(0, 0, 0, 0.12);
+        background-image: linear-gradient(to right,
+                #004fa8, #0077d1,
+                #022d5e, #085794
+            );
+
+        background-size: 300% 100%;
+        background-position: 0% 50%;
+        color: $color-bg;
+        border: none;
+        cursor: pointer;
+        transition: background-position 0.5s ease;
 
         &:hover {
-            background-color: darken($color-primary, 5%);
-            border-color: darken($color-primary, 5%);
+            background-position: 100% 50%;
         }
     }
 
     &--sm {
-        padding: rem(8) rem(20);
+        padding: rem(15) rem(20);
         font-size: $fs-sm;
     }
 
